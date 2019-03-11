@@ -9,14 +9,14 @@
 title: 
 brief-intro: 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://naiixeel.github.io/" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
 twitter_username: 
 facebook_username: 
-github_username:  naiixeel
+github_username: naiixeel
 email: 
 weibo_username: 
 zhihu_username: 
