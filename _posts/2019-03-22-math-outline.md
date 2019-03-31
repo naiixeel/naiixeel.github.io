@@ -93,5 +93,7 @@ author: naiixeel
 >
 > #4  KL 散度 (KL Divergence)
 
+### 参考文献
+
 [ [1](https://medium.com/meta-design-ideas/math-stats-and-nlp-for-machine-learning-as-fast-as-possible-915ef47ced5f) ] Math, Stats and NLP for Machine Learning: As Fast As Possible
 
