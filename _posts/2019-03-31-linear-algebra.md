@@ -452,7 +452,7 @@ $$
 
 > **定义** 一个 $n​$ 维向量空间 $\cal{S}​$ 的基是在 $\cal{S}​$ 中的任意 $n​$ 个线性无关向量的集合。
 
-任意两个线性无关的向量 $\{\hat{e}_1,\hat{e_2}\}​$ 都可以作为向量空间 $\Bbb{R}^2​$ 的基。任意一个向量 $\overrightarrow{v} \in {\Bbb{R}}^2​$ 都可以使用这些基向量的线性组合表示：$\overrightarrow{v} =v_1 \hat{e}_1+v_2\hat{e}_2​$。同一向量  $\overrightarrow{v} ​$ 可能对应于不同的坐标对，这都取决于基的选取。在标准基 $B_s \equiv \{\hat{i}, \hat{j}\}​$ 中，坐标对为 $\overrightarrow{v} =(v_x, v_y)​$，而在其基  $B_e=\{\hat{e}_1,\hat{e}_2\}​$ 中，坐标对为 $\overrightarrow{v} =(v_1, v_2)​$，因此需要注意不同的基对应的坐标系。将一个坐标对从基 $B_e​$ 表示的坐标系转换到基 $B_s​$ 表示的坐标系就是乘以一个基变换矩阵：
+任意两个线性无关的向量 $\{\hat{e}_1,\hat{e}_2\}​$ 都可以作为向量空间 $\Bbb{R}^2​$ 的基。任意一个向量 $\overrightarrow{v} \in {\Bbb{R}}^2​$ 都可以使用这些基向量的线性组合表示：$\overrightarrow{v} =v_1 \hat{e}_1+v_2\hat{e}_2​$。同一向量  $\overrightarrow{v}​$ 可能对应于不同的坐标对，这都取决于基的选取。在标准基 $B_s \equiv \{\hat{i}, \hat{j}\}​$ 中，坐标对为 $\overrightarrow{v} =(v_x, v_y)​$，而在其基  $B_e=\{\hat{e}_1,\hat{e}_2\}​$ 中，坐标对为 $\overrightarrow{v} =(v_1, v_2)​$，因此需要注意不同的基对应的坐标系。将一个坐标对从基 $B_e​$ 表示的坐标系转换到基 $B_s​$ 表示的坐标系就是乘以一个基变换矩阵：
 
 $$
 \begin{bmatrix}
