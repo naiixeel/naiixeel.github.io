@@ -1,5 +1,6 @@
 ---
 layout: post
+mathjax: true
 title:  "线性代数基础回顾"
 categories: 机器学习
 tags: 机器学习 数学基础 线性代数
