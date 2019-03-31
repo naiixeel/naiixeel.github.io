@@ -129,7 +129,7 @@ $$
 
 #### E 基本向量空间
 
-一个向量空间由一组向量以及这些向量的所有线性组合构成。例如向量空间 ${\cal{S}}={\rm{span}}\{{\overrightarrow{v}_1,\overrightarrow{v}_2}\}​$ 是由所有形式为 ${\overrightarrow{v}}=\alpha \overrightarrow{v}_1+\beta \overrightarrow{v}_2​$ 的向量组成，其中 $\alpha​$ 和 $\beta​$ 是任意实数。有三个与矩阵 $A​$ 有关的基本向量空间。
+一个向量空间由一组向量以及这些向量的所有线性组合构成。例如向量空间 ${\cal{S}}={\rm{span}}\{\overrightarrow{v}_1,\overrightarrow{v}_2\}​$ 是由所有形式为 $\overrightarrow{v}=\alpha \overrightarrow{v}_1+\beta \overrightarrow{v}_2​$ 的向量组成，其中 $\alpha​$ 和 $\beta​$ 是任意实数。有三个与矩阵 $A​$ 有关的基本向量空间。
 
 矩阵 $A​$ 的**列空间** ${\cal{C}}(A)​$ 是由矩阵 $A​$ 的列向量的线性组合产生的向量构成的向量空间：
 $$
