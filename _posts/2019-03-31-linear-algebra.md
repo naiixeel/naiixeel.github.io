@@ -29,7 +29,7 @@ $$
 \end{align}
 $$
 
-向量的点乘和叉乘也可以用向量间的夹角 $\theta$ 来描述。向量的点乘公式为 $\overrightarrow{u} \cdot \overrightarrow{v}=||\overrightarrow{u} ||\,|| \overrightarrow{v}||\cos\theta$，如果两个向量的夹角为 $90^\circ$则称这两个向量是正交的。正交向量的点乘结果为零：$\overrightarrow{u} \cdot \overrightarrow{v}=||\overrightarrow{u} ||\,|| \overrightarrow{v}||\cos(90^\circ)=0$。叉乘向量的模可以表示为 $||\overrightarrow{u} \times \overrightarrow{v}||=||\overrightarrow{u} ||\,|| \overrightarrow{v}||\sin\theta$。向量的叉乘不满足交换率，即：$\overrightarrow{u} \times \overrightarrow{v} \neq \overrightarrow{v} \times \overrightarrow{u}$，实际上$\overrightarrow{u} \times \overrightarrow{v} = -\overrightarrow{v} \times \overrightarrow{u}$。
+向量的点乘和叉乘也可以用向量间的夹角 $\theta$ 来描述。向量的点乘公式为 $\overrightarrow{u} \cdot \overrightarrow{v}=\begin{Vmatrix} \overrightarrow{u} \end{Vmatrix}\begin{Vmatrix}\overrightarrow{v}\end{Vmatrix}\cos\theta$ ，如果两个向量的夹角为 $90^\circ$ 则称这两个向量是正交的。正交向量的点乘结果为零：$\overrightarrow{u} \cdot \overrightarrow{v}=\begin{Vmatrix}\overrightarrow{u} \end{Vmatrix}\begin{Vmatrix}\overrightarrow{v}\end{Vmatrix}\cos(90^\circ)=0$。叉乘向量的模可以表示为 $\begin{Vmatrix}\overrightarrow{u} \times \overrightarrow{v}\end{Vmatrix}=\begin{Vmatrix}\overrightarrow{u}\end{Vmatrix}\begin{Vmatrix}\overrightarrow{v}\end{Vmatrix}\sin\theta$。向量的叉乘不满足交换率，即：$\overrightarrow{u} \times \overrightarrow{v} \neq \overrightarrow{v} \times \overrightarrow{u}$，实际上$\overrightarrow{u} \times \overrightarrow{v} = -\overrightarrow{v} \times \overrightarrow{u}$。
 
 #### B 矩阵运算
 
@@ -76,7 +76,7 @@ $$
 Tr[A]\equiv \sum_{i=1}^n a_{ii}
 $$
 
-**行列式** 矩阵 $A \in {\Bbb{R}}^{n \times n}$ 的行列式记为 $\det(A)$ 或 $|A|$
+**行列式** 矩阵 $A \in {\Bbb{R}}^{n \times n}$ 的行列式记为 $\det(A)$ 或 $\begin{vmatrix} AS \end{vmatrix}$
 
 #### C 矩阵与向量的乘法
 
@@ -494,7 +494,9 @@ T(\hat{i})&T(\hat{j})\\
 \end{bmatrix}
 \; \in \; {\Bbb{R}}^{2 \times 2}
 $$
+
 第一个例子，考虑将向量投影到 $x$ 轴的线性变换 $\prod_x$。对于任何一个向量 $\overrightarrow{v}=(v_x, v_y)$，都有  $\prod_x(\overrightarrow{v})=(v_x, 0)$。线性变换 $\prod_x$ 对应的矩阵为：
+
 $$
 M_{\prod_x}=
 \begin{bmatrix}
@@ -551,9 +553,9 @@ A=
 \end{bmatrix}
 $$
 
-矩阵 $A$ 的最简行阶梯矩阵包含三个主元。主元的位置对寻找列空间 ${\cal C}(A)$ 和零空间 ${\cal N}(A)$ 的基有着十分重要的作用。向量 $\{ (1,3,0,0), (0,0,1,0), (0,0,0,1) \}$ 构成了行空间 ${\cal R}(A)$ 的基。求列空间 ${\cal C}(A)$ 的基，需要找到矩阵线性无关的列，具体做法是在最简行阶梯矩阵 ${\rm rref}(A)$ 中找到从上往下第一个非零元素为 1 的列，原始矩阵中对应的列就构成了列空间的基。在最简行阶梯矩阵 ${\rm rref}(A)$ 中，第一列、第三列和第四列是线性无关的，所以向量 $\{ (1,2,3)^T,(3,7,9)^T,(3,6,10)^T\}$  构成了列空间 ${\cal C}(A)$ 的基。
+矩阵 $A$ 的最简行阶梯矩阵包含三个主元。主元的位置对寻找列空间 ${\cal C}(A)$ 和零空间 ${\cal N}(A)$ 的基有着十分重要的作用。向量 $\{(1,3,0,0), (0,0,1,0), (0,0,0,1)\}$ 构成了行空间 ${\cal R}(A)$ 的基。求列空间 ${\cal C}(A)$ 的基，需要找到矩阵线性无关的列，具体做法是在最简行阶梯矩阵 ${\rm rref}(A)$ 中找到从上往下第一个非零元素为 1 的列，原始矩阵中对应的列就构成了列空间的基。在最简行阶梯矩阵 ${\rm rref}(A)$ 中，第一列、第三列和第四列是线性无关的，所以向量 $\{(1,2,3)^T,(3,7,9)^T,(3,6,10)^T\}$  构成了列空间 ${\cal C}(A)$ 的基。
 
-零空间 ${\cal N}(A)\equiv \{\overrightarrow{x} \in {\Bbb R}^4 | A\overrightarrow{x}=\overrightarrow{0}\}$ 基也可以通过最简行阶梯矩阵求解。最简行阶梯矩阵的第二列不包含主元，因此它对应了一个自由变量，将其记为 $s$。要求解的向量包含三个未知量和一个自由变量 $(x_1,s,x_3,x_4)$ 并且它满足以下条件：
+零空间 ${\cal N}(A) \equiv \{\overrightarrow{x} \in {\Bbb R}^4|A\overrightarrow{x}=\overrightarrow{0}\}$ 基也可以通过最简行阶梯矩阵求解。最简行阶梯矩阵的第二列不包含主元，因此它对应了一个自由变量，将其记为 $s$。要求解的向量包含三个未知量和一个自由变量 $(x_1,s,x_3,x_4)$ 并且它满足以下条件：
 
 $$
 \begin{bmatrix}
