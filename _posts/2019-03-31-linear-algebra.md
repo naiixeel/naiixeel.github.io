@@ -146,12 +146,12 @@ $$
 
 #### E 基本向量空间
 
-一个向量空间由一组向量以及这些向量的所有线性组合构成。例如向量空间 ${\cal{S}}={\rm{span}}\{\overrightarrow{v}_1,\overrightarrow{v}_2\}​$ 是由所有形式为 $\overrightarrow{v}=\alpha \overrightarrow{v}_1+\beta \overrightarrow{v}_2​$ 的向量组成，其中 $\alpha​$ 和 $\beta​$ 是任意实数。有三个与矩阵 $A​$ 有关的基本向量空间。
+一个向量空间由一组向量以及这些向量的所有线性组合构成。例如向量空间 ${\cal{S}}={\rm{span}}\begin{Bmatrix}\overrightarrow{v}_1,\overrightarrow{v}_2\end{Bmatrix}​$ 是由所有形式为 $\overrightarrow{v}=\alpha \overrightarrow{v}_1+\beta \overrightarrow{v}_2​$ 的向量组成，其中 $\alpha​$ 和 $\beta​$ 是任意实数。有三个与矩阵 $A​$ 有关的基本向量空间。
 
 矩阵 $A​$ 的**列空间** ${\cal{C}}(A)​$ 是由矩阵 $A​$ 的列向量的线性组合产生的向量构成的向量空间：
 
 $$
-{\cal{C}}(A)\equiv \{ \overrightarrow{y}\in{\Bbb{R}}^m|\overrightarrow{y}=A\overrightarrow{x},  \overrightarrow{x}\in{\Bbb{R}}^n\}
+{\cal{C}}(A)\equiv \begin{Bmatrix} \overrightarrow{y}\in{\Bbb{R}}^m|\overrightarrow{y}=A\overrightarrow{x},  \overrightarrow{x}\in{\Bbb{R}}^n\end{Bmatrix}
 $$
 
 列空间表现的是线性变换  $T_A​$ 的结果可能出现的范围。通过遍历所有可能的输入 $\overrightarrow{x}​$，就可以获得矩阵 $A​$ 的列向量所有可能的线性组合。
@@ -159,7 +159,7 @@ $$
 矩阵 $A​$ 的**零空间** ${\cal{N}}(A)​$ 是由所有使线性变换  $T_A​$ 输出零向量的向量组成的向量空间：
 
 $$
-{\cal{N}}(A)\equiv\{ \overrightarrow{x} \in {\Bbb{R}}^n|A\overrightarrow{x}=\overrightarrow{0} \}
+{\cal{N}}(A)\equiv\begin{Bmatrix} \overrightarrow{x} \in {\Bbb{R}}^n|A\overrightarrow{x}=\overrightarrow{0} \end{Bmatrix}
 $$
 
 零空间中的向量与矩阵的所有行向量都正交。
@@ -452,7 +452,7 @@ $$
 
 > **定义** 一个 $n​$ 维向量空间 $\cal{S}​$ 的基是在 $\cal{S}​$ 中的任意 $n​$ 个线性无关向量的集合。
 
-任意两个线性无关的向量 $\{\hat{e}_1,\hat{e}_2\}​$ 都可以作为向量空间 $\Bbb{R}^2​$ 的基。任意一个向量 $\overrightarrow{v} \in {\Bbb{R}}^2​$ 都可以使用这些基向量的线性组合表示：$\overrightarrow{v} =v_1 \hat{e}_1+v_2\hat{e}_2​$。同一向量  $\overrightarrow{v}​$ 可能对应于不同的坐标对，这都取决于基的选取。在标准基 $B_s \equiv \{\hat{i}, \hat{j}\}​$ 中，坐标对为 $\overrightarrow{v} =(v_x, v_y)​$，而在其基  $B_e=\{\hat{e}_1,\hat{e}_2\}​$ 中，坐标对为 $\overrightarrow{v} =(v_1, v_2)​$，因此需要注意不同的基对应的坐标系。将一个坐标对从基 $B_e​$ 表示的坐标系转换到基 $B_s​$ 表示的坐标系就是乘以一个基变换矩阵：
+任意两个线性无关的向量 $\begin{Bmatrix}\hat{e}_1,\hat{e}_2\end{Bmatrix}​$ 都可以作为向量空间 $\Bbb{R}^2​$ 的基。任意一个向量 $\overrightarrow{v} \in {\Bbb{R}}^2​$ 都可以使用这些基向量的线性组合表示：$\overrightarrow{v} =v_1 \hat{e}_1+v_2\hat{e}_2​$。同一向量  $\overrightarrow{v}​$ 可能对应于不同的坐标对，这都取决于基的选取。在标准基 $B_s \equiv \begin{Bmatrix}\hat{i}, \hat{j}\end{Bmatrix}​$ 中，坐标对为 $\overrightarrow{v} =(v_x, v_y)​$，而在其基  $B_e=\begin{Bmatrix}\hat{e}_1,\hat{e}_2\end{Bmatrix}​$ 中，坐标对为 $\overrightarrow{v} =(v_1, v_2)​$，因此需要注意不同的基对应的坐标系。将一个坐标对从基 $B_e​$ 表示的坐标系转换到基 $B_s​$ 表示的坐标系就是乘以一个基变换矩阵：
 
 $$
 \begin{bmatrix}
@@ -529,9 +529,9 @@ $M_{R_\theta}$ 的第一列表明了 $R_{\theta}$ 将向量 $\hat{i}  \equiv 1\a
 
 #### C 向量空间的维度和基
 
-向量空间的维度定义为表示向量空间的基中向量的个数。考虑以下向量空间 ${\cal S} = {\rm{span}} \{(1, 0, 0), (0, 1, 0), (1,1,0)\}​$，看起来它包含三个向量，所以它的维度应该是 3。但实际上这三个向量并不线性相关，它们不能构成向量空间 $\cal{S}​$ 的基。两个向量已经足够用来表示向量空间 $\cal{S}​$ 中的任何向量，所以 ${\cal S} = {\rm{span}} \{(1, 0, 0), (0, 1, 0)\}​$，这两个向量线性无关所以能构成向量空间 $\cal{S}​$ 的基。因此向量空间 $\cal{S}​$ 的维度为 $\dim({\cal S})=2​$。
+向量空间的维度定义为表示向量空间的基中向量的个数。考虑以下向量空间 ${\cal S} = {\rm{span}} \begin{Bmatrix}(1, 0, 0), (0, 1, 0), (1,1,0)\end{Bmatrix}​$，看起来它包含三个向量，所以它的维度应该是 3。但实际上这三个向量并不线性相关，它们不能构成向量空间 $\cal{S}​$ 的基。两个向量已经足够用来表示向量空间 $\cal{S}​$ 中的任何向量，所以 ${\cal S} = {\rm{span}} \begin{Bmatrix}(1, 0, 0), (0, 1, 0)\end{Bmatrix}​$，这两个向量线性无关所以能构成向量空间 $\cal{S}​$ 的基。因此向量空间 $\cal{S}​$ 的维度为 $\dim({\cal S})=2​$。
 
-有一个通用的方法用来寻找一个向量空间的基。假设有一个由 $m​$ 个向量构成的向量空间 ${\cal V} = {\rm span}\{\overrightarrow{v}_1,\overrightarrow{v}_2,\cdots,\overrightarrow{v}_m\}​$ 需要求解维度和基。为了得到向量空间 ${\cal V}​$ 的基，就必须要找到一组能够表示向量空间 ${\cal V}​$ 的线性无关的向量。我们可以使用高斯－若尔当消元法来完成这个任务。首先将向量 $\overrightarrow{v}_i​$ 写为矩阵 $M​$ 的一行，向量空间 $\cal V​$ 就对应于矩阵的行空间。接下来就使用行操作将矩阵 $M​$ 转化为最简行阶梯矩阵。因为行操作不会改变矩阵的行空间，矩阵 $M​$ 的行空间就等价于其最简行阶梯矩阵的行空间。最简行阶梯矩阵的非零行就构成了向量空间 $\cal V​$ 的基，非零行的数量就是向量空间 $\cal V​$ 的维度。
+有一个通用的方法用来寻找一个向量空间的基。假设有一个由 $m​$ 个向量构成的向量空间 ${\cal V} = {\rm span}\begin{Bmatrix}\overrightarrow{v}_1,\overrightarrow{v}_2,\cdots,\overrightarrow{v}_m\end{Bmatrix}​$ 需要求解维度和基。为了得到向量空间 ${\cal V}​$ 的基，就必须要找到一组能够表示向量空间 ${\cal V}​$ 的线性无关的向量。我们可以使用高斯－若尔当消元法来完成这个任务。首先将向量 $\overrightarrow{v}_i​$ 写为矩阵 $M​$ 的一行，向量空间 $\cal V​$ 就对应于矩阵的行空间。接下来就使用行操作将矩阵 $M​$ 转化为最简行阶梯矩阵。因为行操作不会改变矩阵的行空间，矩阵 $M​$ 的行空间就等价于其最简行阶梯矩阵的行空间。最简行阶梯矩阵的非零行就构成了向量空间 $\cal V​$ 的基，非零行的数量就是向量空间 $\cal V​$ 的维度。
 
 #### D 行空间，列空间和矩阵的秩
 
@@ -553,9 +553,9 @@ A=
 \end{bmatrix}
 $$
 
-矩阵 $A$ 的最简行阶梯矩阵包含三个主元。主元的位置对寻找列空间 ${\cal C}(A)$ 和零空间 ${\cal N}(A)$ 的基有着十分重要的作用。向量 $\{(1,3,0,0), (0,0,1,0), (0,0,0,1)\}$ 构成了行空间 ${\cal R}(A)$ 的基。求列空间 ${\cal C}(A)$ 的基，需要找到矩阵线性无关的列，具体做法是在最简行阶梯矩阵 ${\rm rref}(A)$ 中找到从上往下第一个非零元素为 1 的列，原始矩阵中对应的列就构成了列空间的基。在最简行阶梯矩阵 ${\rm rref}(A)$ 中，第一列、第三列和第四列是线性无关的，所以向量 $\{(1,2,3)^T,(3,7,9)^T,(3,6,10)^T\}$  构成了列空间 ${\cal C}(A)$ 的基。
+矩阵 $A$ 的最简行阶梯矩阵包含三个主元。主元的位置对寻找列空间 ${\cal C}(A)$ 和零空间 ${\cal N}(A)$ 的基有着十分重要的作用。向量 $\begin{Bmatrix}(1,3,0,0), (0,0,1,0), (0,0,0,1)\end{Bmatrix}$ 构成了行空间 ${\cal R}(A)$ 的基。求列空间 ${\cal C}(A)$ 的基，需要找到矩阵线性无关的列，具体做法是在最简行阶梯矩阵 ${\rm rref}(A)$ 中找到从上往下第一个非零元素为 1 的列，原始矩阵中对应的列就构成了列空间的基。在最简行阶梯矩阵 ${\rm rref}(A)$ 中，第一列、第三列和第四列是线性无关的，所以向量 $\begin{Bmatrix}(1,2,3)^T,(3,7,9)^T,(3,6,10)^T\end{Bmatrix}$  构成了列空间 ${\cal C}(A)$ 的基。
 
-零空间 ${\cal N}(A) \equiv \{\overrightarrow{x} \in {\Bbb R}^4|A\overrightarrow{x}=\overrightarrow{0}\}$ 基也可以通过最简行阶梯矩阵求解。最简行阶梯矩阵的第二列不包含主元，因此它对应了一个自由变量，将其记为 $s$。要求解的向量包含三个未知量和一个自由变量 $(x_1,s,x_3,x_4)$ 并且它满足以下条件：
+零空间 ${\cal N}(A)\equiv\begin{Bmatrix}\overrightarrow{x}\in{\Bbb R}^4 \mid A\overrightarrow{x}=\overrightarrow{0}\end{Bmatrix}$ 基也可以通过最简行阶梯矩阵求解。最简行阶梯矩阵的第二列不包含主元，因此它对应了一个自由变量，将其记为 $s$。要求解的向量包含三个未知量和一个自由变量 $(x_1,s,x_3,x_4)$ 并且它满足以下条件：
 
 $$
 \begin{bmatrix}
@@ -578,7 +578,7 @@ x_1\\s\\x_3\\x_4
 \end{align}
 $$
 
-未知量 $x_1$，$x_2$ 和 $x_3$ 可以用自由变量 $s$ 来表示，其中 $x_1 = -3s$，$x_3=0$，$x_4=0$。因此对于任何形式为 $(-3s,s,0,0)$ 且 $s\in {\Bbb R}$ 的向量都属于矩阵 $A$ 的零空间，矩阵 $A$ 的零空间可写为 ${\cal N}(A)={\rm {span}}\{ (-3,1,0,0)^T\}$。通过观察可知 ${\rm dim}({\cal C}(A))={\rm dim}({\cal R}(A)) = 3$，这就是矩阵 $A$ 的秩。同时，${\rm dim}({\cal R}(A))+{\rm dim}({\cal N}(A))=3+1=4$，这就是线性变换 $T_A​$ 所在空间的维度。
+未知量 $x_1$，$x_2$ 和 $x_3$ 可以用自由变量 $s$ 来表示，其中 $x_1 = -3s$，$x_3=0$，$x_4=0$。因此对于任何形式为 $(-3s,s,0,0)$ 且 $s\in {\Bbb R}$ 的向量都属于矩阵 $A$ 的零空间，矩阵 $A$ 的零空间可写为 ${\cal N}(A)={\rm {span}}\begin{Bmatrix} (-3,1,0,0)^T\end{Bmatrix}$。通过观察可知 ${\rm dim}({\cal C}(A))={\rm dim}({\cal R}(A)) = 3$，这就是矩阵 $A$ 的秩。同时，${\rm dim}({\cal R}(A))+{\rm dim}({\cal N}(A))=3+1=4$，这就是线性变换 $T_A​$ 所在空间的维度。
 
 #### E 可逆矩阵定理
 
@@ -596,7 +596,7 @@ $$
 >
 > (4) $A$ 的列空间为 ${\Bbb R}^n$
 >
-> (6) A 不存在零空间 (只有零向量 ${\cal N}(A)=\{\overrightarrow{0} \}$)
+> (6) A 不存在零空间 (只有零向量 ${\cal N}(A)=\begin{Bmatrix}\overrightarrow{0} \end{Bmatrix}$)
 >
 > (7) $A$ 的行列式不为零 ${\rm det}(A) \neq 0​$
 
@@ -604,7 +604,7 @@ $$
 
 #### F 行列式
 
-矩阵的行列式可记为 ${\rm det}(A)​$ 或 $|A|​$，它是一个验证矩阵是否可逆的特殊方法。$2\times 2​$ 和 $3\times 3​$ 的矩阵的行列式计算公式为:
+矩阵的行列式可记为 ${\rm det}(A)​$ 或 $\begin{vmatrix}A\end{vmatrix}$，它是一个验证矩阵是否可逆的特殊方法。$2\times 2​$ 和 $3\times 3​$ 的矩阵的行列式计算公式为:
 
 $$
 \begin{align}
@@ -638,19 +638,25 @@ a_{31} & a_{32}
 \end{align}
 $$
 
-如果 $|A|=0$，那么 $A$ 是不可逆的，相反如果 $|A| \neq 0$，那么 $A$ 是可逆的。
+如果 $\begin{vmatrix}A\end{vmatrix}=0$，那么 $A$ 是不可逆的，相反如果 $\begin{vmatrix}A\end{vmatrix} \neq 0$，那么 $A$ 是可逆的。
 
 #### G 特征值和特征向量
 
-矩阵的特征向量是一组特殊的输入向量，特征向量与矩阵的乘积描述为特征向量的尺度变化。矩阵与它的一个特征向量的相乘就等价于一个常数乘以该特征向量 $A \overrightarrow{e}_\lambda=\lambda \overrightarrow{e}_\lambda$，其中常数 $\lambda$ 称为矩阵 $A$ 的特征值。求解矩阵 $A$ 的特征值可以从特征值方程 $A \overrightarrow{e}_\lambda=\lambda \overrightarrow{e}_\lambda$ 开始，可将其改写为一个零空间问题：
+矩阵的特征向量是一组特殊的输入向量，特征向量与矩阵的乘积描述为特征向量的尺度变化。矩阵与它的一个特征向量的相乘就等价于一个常数乘以该特征向量: 
 
 $$
-A \overrightarrow{e}_\lambda=\lambda \overrightarrow{e}_\lambda 
+A\overrightarrow{e}_\lambda=\lambda \overrightarrow{e}_\lambda
+$$
+
+其中常数 $\lambda$ 称为矩阵 $A$ 的特征值。求解矩阵 $A$ 的特征值可以从特征值方程开始，可将其改写为一个零空间问题：
+
+$$
+A\overrightarrow{e}_\lambda=\lambda \overrightarrow{e}_\lambda 
 \quad \Rightarrow \quad
 (A-\lambda E)\overrightarrow{e}_\lambda =\overrightarrow{0}
 $$
 
-当 $|A-\lambda E|=0​$ 时，方程有解。矩阵 $A \in {\Bbb R}^{n\times n}​$ 的特征值 $\{\lambda_1,\lambda_2,\cdots,\lambda_n \}​$ 是特征多项式 $p(\lambda) = |A-\lambda E|​$ 的基础。与特征值对应的特征向量属于矩阵 $(A-\lambda E)​$ 的零空间。一些矩阵可以用它的特征值和特征向量来表示。设矩阵 $\Lambda​$ 的对角线是由矩阵 $A​$ 的特征值组成，矩阵 $Q​$ 的列由矩阵 $A​$ 的特征向量组成：
+当 $\begin{vmatrix}A-\lambda E\end{vmatrix}=0$ 时，方程有解。矩阵 $A \in {\Bbb R}^{n\times n}$ 的特征值 $\begin{Bmatrix}\lambda_1,\lambda_2,\cdots,\lambda_n \end{Bmatrix}$ 是特征多项式 $p(\lambda) = \begin{vmatrix}A-\lambda E\end{vmatrix}$ 的基础。与特征值对应的特征向量属于矩阵 $(A-\lambda E)$ 的零空间。一些矩阵可以用它的特征值和特征向量来表示。设矩阵 $\Lambda$ 的对角线是由矩阵 $A$ 的特征值组成，矩阵 $Q$ 的列由矩阵 $A$ 的特征向量组成：
 
 $$
 \Lambda=
