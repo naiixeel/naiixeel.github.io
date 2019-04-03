@@ -1,0 +1,13 @@
+<script>
+    window.onload = function()
+    {
+      var week = "日一二三四五六";
+      var times = document.getElementsByTagName('time');
+      for(var i = 0; i < times.length; i++)
+      {
+        var dateStr = times[i].innerText.trim().split(' ')[0];
+        var date = new Date(dateStr);
+        times[i].innerText = dateStr + "  星期" + week.split(/(?!\b)/)[date.getDay()];
+      }
+    };
+</script>

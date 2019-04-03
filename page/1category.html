@@ -19,7 +19,7 @@ type: page
                         {% if post.url %}
                         <li>
                             <time>
-                            {{ post.date | date:"%F" }} <!-- {{ post.date | date: "%a" }}.-->
+                            {{ post.date | date:"%F" }} <!--{{ post.date | date: "%a" }}.-->
                             </time>
                             <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 
@@ -31,6 +31,7 @@ type: page
                 {% endfor %}
             {% endfor %}
         </ul>
+        {% include dateconvert.html %}
     </div>
     <button class="anchor"><i class="fa fa-anchor"></i></button>
     <div class="right">

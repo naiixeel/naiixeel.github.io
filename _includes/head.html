@@ -42,16 +42,4 @@
 {% if page.mathjax %}
   {% include mathjax.html %}
 {% endif %}
-<script>
-    window.onload = function()
-    {
-      var week = "日一二三四五六";
-      var times = document.getElementsByTagName('time');
-      for(var i = 0; i < times.length; i++)
-      {
-        var date = new Date(times[i].innerText);
-        times[i].innerText =times[i].innerText + "  星期" + week.split(/(?!\b)/)[date.getDay()];
-      }
-    };
-</script>
 </head>
